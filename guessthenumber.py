@@ -1,5 +1,7 @@
 import random
-
+print("Name   : Lohith Adiver")
+print("USN    : 1AY24AI063")
+print("Section: O")
 def guess_the_number():
     number_to_guess = random.randint(1, 100)
     attempts = 0
