@@ -1,3 +1,6 @@
+print("Name   : Lohith Adiver")
+print("USN    : 1AY24AI063")
+print("Section: O")
 import random
 
 def rock_paper_scissors():
