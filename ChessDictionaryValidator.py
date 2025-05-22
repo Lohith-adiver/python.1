@@ -1,3 +1,6 @@
+print("Name   : Lohith Adiver")
+print("USN    : 1AY24AI063")
+print("Section: O")
 def is_valid_position(pos):
     if len(pos) != 2:
         return False
