@@ -1,3 +1,6 @@
+print("Name   : Lohith Adiver")
+print("USN    : 1AY24AI063")
+print("Section: O")
 import random
 
 number_of_experiments = 10000
