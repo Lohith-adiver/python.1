@@ -3,7 +3,7 @@ print("USN    : 1AY24AI063")
 print("Section: O")
 def collatz(n):
     while n != 1:
-        print(n, end=' → ')
+        print(n, end=' --> ')
         if n % 2 == 0:
             n = n // 2
         else:
