@@ -1,3 +1,4 @@
+
 print("Name   : Lohith Adiver")
 print("USN    : 1AY24AI063")
 print("Section: O")
@@ -7,12 +8,15 @@ import os
 
 WIDTH = 20
 HEIGHT = 10
+GENERATIONS = 3
+
 
 def create_grid():
     return [[random.choice([' ', '█']) for _ in range(WIDTH)] for _ in range(HEIGHT)]
 
-def print_grid(grid):
+def print_grid(grid, generation):
     os.system('cls' if os.name == 'nt' else 'clear')
+    print(f"Generation {generation}")
     for row in grid:
         print(''.join(row))
 
@@ -44,9 +48,10 @@ def next_generation(grid):
 grid = create_grid()
 
 try:
-    while True:
-        print_grid(grid)
+    for generation in range(1, GENERATIONS + 1):
+        print_grid(grid, generation)
         grid = next_generation(grid)
         time.sleep(0.5)
+    print("\nSimulation completed after 3 generations.")
 except KeyboardInterrupt:
-    print("\nSimulation ended.")
+    print("\nSimulation interrupted.")
