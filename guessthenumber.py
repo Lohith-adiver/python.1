@@ -2,25 +2,22 @@ import random
 print("Name   : Lohith Adiver")
 print("USN    : 1AY24AI063")
 print("Section: O")
-def guess_the_number():
-    number_to_guess = random.randint(1, 100)
-    attempts = 0
-    print("Welcome to Guess the Number!")
-    print("I'm thinking of a number between 1 and 100.")
 
-    while True:
-        try:
-            guess = int(input("Enter your guess: "))
-            attempts += 1
+print("Welcome to the Number Guessing Game!")
+secret_number = random.randint(1, 20)
+print("I'm thinking of a number between 1 and 20.")
 
-            if guess < number_to_guess:
-                print("Too low. Try again!")
-            elif guess > number_to_guess:
-                print("Too high. Try again!")
-            else:
-                print(f"Congratulations! You guessed the number in {attempts} attempts.")
-                break
-        except ValueError:
-            print("Invalid input. Please enter a number.")
+for guesses_taken in range(1, 7):
+    guess = int(input("Take a guess: "))
 
-guess_the_number()
+    if guess < secret_number:
+        print("Your guess is too low.")
+    elif guess > secret_number:
+        print("Your guess is too high.")
+    else:
+        break 
+
+if guess == secret_number:
+    print(f"Good job! You guessed my number in {guesses_taken} guesses!")
+else:
+    print(f"Nope. The number I was thinking of was {secret_number}.")
