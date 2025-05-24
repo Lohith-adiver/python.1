@@ -6,22 +6,24 @@ import time
 def zigzag():
     indent = 0
     indent_increasing = True
+    zigzag_count = 0
+    max_zigzags = 3  
 
-    try:
-        print("Welcome to the Zigzag pattern! Press Ctrl+C to stop.\n")
-        while True:
-            print(' ' * indent + '🌟')
-            time.sleep(0.05)
+    print("Welcome to the Zigzag pattern! It will stop after 5 zigzags.\n")
+    while zigzag_count < max_zigzags:
+        print(' ' * indent + '**')
+        time.sleep(0.05)
 
-            if indent_increasing:
-                indent += 1
-                if indent == 20:
-                    indent_increasing = False
-            else:
-                indent -= 1
-                if indent == 0:
-                    indent_increasing = True
-    except KeyboardInterrupt:
-        print("\nZigzag ended. Have a great day!")
+        if indent_increasing:
+            indent += 1
+            if indent == 4:
+                indent_increasing = False
+        else:
+            indent -= 1
+            if indent == 0:
+                indent_increasing = True
+                zigzag_count += 1
+
+    print("\nZigzag ended. Have a great day!")
 
 zigzag()
