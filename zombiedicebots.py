@@ -2,9 +2,10 @@ import random
 
 print("Name   : Lohith Adiver")
 print("USN    : 1AY24AI063")
-print("Section: O")
+print("Section: O\n")
 
 def roll_die():
+    # Randomly returns one side of a die
     return random.choice(['brain', 'shotgun', 'footsteps'])
 
 def bot_turn():
