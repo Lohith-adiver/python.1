@@ -1,4 +1,6 @@
-
+print("Name   : Lohith Adiver")
+print("USN    : 1AY24AI063")
+print("Section: O")
 import re
 
 with open('madlib_input.txt') as file:
